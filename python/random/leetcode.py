@@ -5,4 +5,19 @@ graph = {'A': set(['B', 'C']),
          'E': set(['B', 'F']),
          'F': set(['C', 'E'])}
 
-print(graph)
+"""
+
+"""
+def bfs(graph, start):
+    visited, queue = set(), [start]
+    while queue:
+        vertex = queue.pop(0)
+        print('vert:%s' % vertex)
+        if vertex not in visited:
+            visited.add(vertex)
+            queue.extend(graph[vertex]-visited)
+            print(queue)
+    return visited
+
+print(bfs(graph,'A'))
+
