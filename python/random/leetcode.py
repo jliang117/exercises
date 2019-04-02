@@ -1,6 +1,8 @@
-def modifyListParam(l):
-    l.append(92)
+graph = {'A': set(['B', 'C']),
+         'B': set(['A', 'D', 'E']),
+         'C': set(['A', 'F']),
+         'D': set(['B']),
+         'E': set(['B', 'F']),
+         'F': set(['C', 'E'])}
 
-l = [99,10,'null']
-modifyListParam(l)
-print(l)
+print(graph)
